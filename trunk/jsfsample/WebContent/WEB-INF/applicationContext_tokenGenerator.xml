@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+
+<beans>
+	
+	
+	<!-- 
+	<bean id="tokenFactory"
+		class="com.merrill.examples.framework.security.token.factory.captcha.JCaptchaTokenFactory">
+		<property name="engine">
+			<ref bean="captchaEngine" />
+		</property>
+	</bean>
+	
+	
+	
+	
+	  com.octo.captcha.engine.image.fisheye.SimpleFishEyeEngine
+	  com.octo.captcha.engine.image.gimpy.DefaultGimpyEngine
+	  com.octo.captcha.engine.image.gimpy.BaffleListGimpyEngine
+	  com.octo.captcha.engine.image.gimpy.FilteredGimpyEngine
+	  com.octo.captcha.engine.image.gimpy.BasicGimpyEngine
+	  com.octo.captcha.engine.image.gimpy.DeformedBaffleListGimpyEngine
+	  com.octo.captcha.engine.image.gimpy.DoubleRandomListGimpyEngine
+	 
+	
+	
+	<bean id="captchaEngine"
+		class="com.octo.captcha.engine.image.gimpy.DefaultGimpyEngine">
+	</bean>
+	
+	 -->
+	
+	
+	<bean id="tokenFactory"
+		class="com.merrill.examples.framework.security.token.factory.captcha.SimpleCaptchaTokenFactory">
+		<property name="randomTextGenerator" >
+			<ref local="randomTextGenerator"/>
+		</property>
+	</bean>
+	
+	<bean id="randomTextGenerator"
+		  class="com.merrill.examples.framework.lang.text.impl.CommonsRandomTextGenerator">
+	</bean>
+	
+
+	<bean id="tokenService"
+		class="com.merrill.examples.framework.security.token.service.impl.TokenServiceImpl">
+		<property name="tokenFactory">
+			<ref bean="tokenFactory" />
+		</property>
+	</bean>
+	
+	<!--  for remoting the service -->
+	<bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+	
+		<property name="serviceName" value="TokenService" />
+		<property name="service" ref="tokenService" />
+		<property name="serviceInterface"
+			value="com.merrill.examples.framework.security.token.service.TokenService" />
+		<property name="registryPort" value="1199" />
+	</bean>
+ 
+
+</beans>

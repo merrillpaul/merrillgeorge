@@ -1,0 +1,82 @@
+<Context docBase="jsf-mysample-1.0" path="/jsf-mysample-1.0"
+	reloadable="true" workDir="work\Catalina\localhost\jsf-mysample-1.0">
+
+	<Loader
+		loaderClass="org.springframework.instrument.classloading.tomcat.TomcatInstrumentableClassLoader" />
+
+	<Realm className="org.apache.catalina.realm.JAASRealm"
+		appName="mysample_login" userClassNames="com.merrill.examples.framework.security.user.tomcat.TomcatUser"
+		roleClassNames="com.merrill.examples.framework.security.user.tomcat.TomcatGroup" debug="99" />
+
+	<Resource name="jdbc/jpasample" auth="Container"
+		type="javax.sql.DataSource" />
+
+	<ResourceParams name="jdbc/jpasample">
+		<parameter>
+			<name>factory</name>
+			<value>
+				org.apache.commons.dbcp.BasicDataSourceFactory
+				<!-- oracle.jdbc.pool.OracleDataSourceFactory -->
+				<!-- com.mysql.jdbc.jdbc2.optional.MysqlDataSourceFactory -->
+			</value>
+		</parameter>
+
+		<!-- Maximum number of dB connections in pool. Make sure you
+			configure your mysqld max_connections large enough to handle
+			all of your db connections. Set to 0 for no limit.
+		-->
+		<parameter>
+			<name>maxActive</name>
+			<value>10</value>
+		</parameter>
+
+		<!-- Maximum number of idle dB connections to retain in pool.
+			Set to 0 for no limit.
+		-->
+		<parameter>
+			<name>maxIdle</name>
+			<value>4</value>
+		</parameter>
+
+		<!-- Maximum time to wait for a dB connection to become available
+			in ms, in this example 10 seconds. An Exception is thrown if
+			this timeout is exceeded.  Set to -1 to wait indefinitely.
+			
+			<parameter>
+			<name>maxWait</name>
+			<value>10000</value>
+			</parameter>
+		-->
+		<!-- MySQL dB username and password for dB connections  -->
+		<parameter>
+			<name>username</name>
+			<value>neon</value>
+		</parameter>
+		<parameter>
+			<name>password</name>
+			<value>bullet</value>
+		</parameter>
+
+		<!-- Class name for mm.mysql JDBC driver -->
+		<parameter>
+			<name>driverClassName</name>
+			<value>oracle.jdbc.OracleDriver</value>
+			<!-- oracle.jdbc.pool.OracleDataSource -->
+			<!-- com.mysql.jdbc.jdbc2.optional.MysqlDataSource -->
+		</parameter>
+
+		<!-- The JDBC connection url for connecting to your MySQL dB.
+			The autoReconnect=true argument to the url makes sure that the
+			mm.mysql JDBC Driver will automatically reconnect if mysqld closed the
+			connection.  mysqld by default closes idle connections after 8 hours.
+		-->
+		<parameter>
+			<name>url</name>
+			<value>jdbc:oracle:thin:@192.168.125.41:1521:ORCL</value>
+		</parameter>
+	</ResourceParams>
+</Context>
+
+
+
+

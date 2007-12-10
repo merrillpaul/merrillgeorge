@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+
+<beans>
+
+
+	<bean id="iportMastersService"
+		class="org.springframework.remoting.rmi.RmiProxyFactoryBean">
+		<property name="serviceUrl"
+			value="rmi://localhost:1199/IPortMastersService" />
+		<property name="serviceInterface"
+			value="com.merrill.examples.business.iport.masters.IPortMastersBI" />
+	</bean>
+
+
+
+	<bean id="iportMastersDelegate"
+		class="com.merrill.examples.framework.client.delegate.DefaultDelegate">
+		<property name="service">
+			<ref bean="iportMastersService" />
+		</property>
+		<property name="module" value="iport" />
+		<property name="subModule" value="masters" />
+		<property name="delegateRequestMap">
+			<map>
+				<entry key="getPorts" value="java.lang.String" />
+				<entry key="getAllVesselTypes" value="" />
+				<entry key="findPort" value="java.lang.String" />
+				<entry key="findVesselType" value="java.lang.String" />
+				<entry key="getCompanyPorts" value="" />
+
+			</map>
+		</property>
+	</bean>
+
+
+
+
+
+	<bean id="iportMastersPortUIController"
+		class="com.merrill.examples.client.controller.iport.masters.PortController">
+		<property name="mastersDelegate">
+			<ref local="iportMastersDelegate" />
+		</property>
+
+	</bean>
+
+</beans>

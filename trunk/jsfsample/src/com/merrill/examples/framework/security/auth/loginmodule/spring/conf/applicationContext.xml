@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+
+<beans>
+
+
+	<bean id="tokenService"
+		class="org.springframework.remoting.rmi.RmiProxyFactoryBean">
+		<property name="serviceUrl"
+			value="rmi://localhost:1199/TokenService" />
+		<property name="serviceInterface"
+			value="com.merrill.examples.framework.security.token.service.TokenService" />
+	</bean>
+
+
+   <bean id="userValidator" class="com.merrill.examples.framework.security.auth.validator.DefaultValidator">
+   	 <property name="tokenService" ref="tokenService"></property>
+   	 <property name="connectionProvider" ref="connectionProvider"></property>
+   	 <property name="userTableName" value="PRT_AUT_USR_MST"/>
+   	 <property name="userNameColumn" value="USR_CODE"/>
+   	 <property name="userPasswordColumn" value="USR_PASSWD"/>
+   	 
+   </bean>
+   
+   
+	<bean id="connectionProvider" class="com.merrill.examples.framework.security.auth.provider.db.impl.JNDIDBConnectionProvider">
+		<property name="jndiName" value="java:comp/env/jdbc/jpasample"></property>
+	</bean>
+
+	
+
+</beans>

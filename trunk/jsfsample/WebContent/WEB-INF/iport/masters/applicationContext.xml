@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+
+<beans>
+
+	<bean id="iportMastersDAO"
+		class="com.merrill.examples.dao.iport.masters.impl.IPortMastersDAOImpl">
+		<property name="em">
+			<ref bean="entityManager" />
+		</property>
+	</bean>
+
+	<bean id="iportMastersController"
+		class="com.merrill.examples.business.iport.masters.controller.impl.IPortMastersControllerImpl">
+		<property name="dao">
+			<ref bean="iportMastersDAO" />
+		</property>
+	</bean>
+
+
+	<bean id="iportMastersServiceTarget"
+		class="com.merrill.examples.services.iport.masters.impl.IPortMastersServicesImpl">
+		<property name="controller">
+			<ref bean="iportMastersController" />
+		</property>
+	</bean>
+
+
+	<bean id="iportMastersServiceProxy"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property>
+
+		<property name="target">
+			<ref local="iportMastersServiceTarget" />
+		</property>
+
+		<property name="transactionAttributes">
+			<props>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+				<prop key="find*">PROPAGATION_SUPPORTS</prop>
+				<prop key="get*">readOnly</prop>
+			</props>
+		</property>
+	</bean>
+<!--  for remoting the service
+	<bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+	
+		<property name="serviceName" value="IPortMastersService" />
+		<property name="service" ref="iportMastersServiceProxy" />
+		<property name="serviceInterface"
+			value="com.merrill.examples.business.iport.masters.IPortMastersBI" />
+
+		<property name="registryPort" value="1199" />
+	</bean>
+ -->
+</beans>
