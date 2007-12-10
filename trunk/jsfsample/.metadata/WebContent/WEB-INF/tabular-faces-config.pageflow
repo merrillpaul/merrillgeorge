@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf11788584849580" configfile="/jsf-mysample-1.0/WebContent/WEB-INF/tabular-faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="pages/tabular/index" id="pf11788627866785" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" outlinks="pf11788627866786" inlinks="pf11788627866786" path="/pages/tabular/index.jsp"/>
+  <links id="pf11788627866786" target="pf11788627866785" source="pf11788627866785" outcome="success"/>
+</pageflow:Pageflow>

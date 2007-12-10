@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf11739521114500" configfile="/jsf-mysample-1.0/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="pages/login" x="338" y="1138" id="pf11739522809663" referenceLink="//@navigationRule.9/@navigationCase.0/@toViewId|" outlinks="pf11739522809664 pf11739522809665 pf11739522809666" inlinks="pf11767059027260 pf11767070614272" path="/pages/login.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/login_result" x="554" y="1522" id="pf11739522809667" referenceLink="//@navigationRule.7/@fromViewId|" outlinks="pf11739522809668 pf11739522809669 pf117395228096610 pf117395228096611 pf117395228096612 pf117395228096613 pf117402714255536 pf11740348095550 pf11742859470392 pf11745512689631 pf11788600095751" inlinks="pf11739522809664" path="/pages/login_result.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/login_failure_badaddress_result" x="554" y="754" id="pf117395228098114" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf11739522809665" path="/pages/login_failure_badaddress_result.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/login_failure_badpassword_result" x="554" y="1138" id="pf117395228098115" referenceLink="//@navigationRule.0/@navigationCase.2/@toViewId|" inlinks="pf11739522809666" path="/pages/login_failure_badpassword_result.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/healthplan/register_healthplan" x="770" y="754" id="pf117395228098116" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf117395228098117 pf117395228098118 pf117395228098119 pf117395228098120" inlinks="pf11739522809668" path="/pages/healthplan/register_healthplan.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/jsf-el-sample/bean-properties" x="264" y="1548" id="pf117395228098121" referenceLink="//@navigationRule.1/@navigationCase.1/@toViewId|" inlinks="pf11739522809669" path="/pages/jsf-el-sample/bean-properties.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/jsf-el-sample/submitting-nested-bean" x="770" y="1522" id="pf117395228098122" referenceLink="//@navigationRule.1/@navigationCase.2/@toViewId|" inlinks="pf117395228096610" path="/pages/jsf-el-sample/submitting-nested-bean.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/event-sample/index" x="924" y="1788" id="pf117395228098123" referenceLink="//@navigationRule.1/@navigationCase.3/@toViewId|" inlinks="pf117395228096611" path="/pages/event-sample/index.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/event-sample/combination-event-sample/index" x="888" y="1980" id="pf117395228098124" referenceLink="//@navigationRule.1/@navigationCase.4/@toViewId|" inlinks="pf117395228096612" path="/pages/event-sample/combination-event-sample/index.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/healthplan/healthplan_accepted" x="986" y="178" id="pf117395228098125" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" inlinks="pf117395228098117" path="/pages/healthplan/healthplan_accepted.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/healthplan/healthplan_rejected" x="986" y="562" id="pf117395228098126" referenceLink="//@navigationRule.2/@navigationCase.1/@toViewId|" inlinks="pf117395228098118" path="/pages/healthplan/healthplan_rejected.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/healthplan/healthplan_badfirstname" x="986" y="946" id="pf117395228098127" referenceLink="//@navigationRule.2/@navigationCase.2/@toViewId|" inlinks="pf117395228098119" path="/pages/healthplan/healthplan_badfirstname.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/healthplan/healthplan_badannualsalary" x="986" y="1330" id="pf117395228098128" referenceLink="//@navigationRule.2/@navigationCase.3/@toViewId|" inlinks="pf117395228098120" path="/pages/healthplan/healthplan_badannualsalary.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/validation-sample/index" x="240" y="1656" id="pf117395228098129" referenceLink="//@navigationRule.3/@navigationCase.0/@toViewId|" inlinks="pf117395228096613" path="/pages/validation-sample/index.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/validation-sample/implicit-validation" x="216" y="1776" id="pf117402714255537" referenceLink="//@navigationRule.4/@navigationCase.0/@toViewId|" inlinks="pf117402714255536" path="/pages/validation-sample/implicit-validation.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/validation-sample/explicit-validation" x="352" y="1800" id="pf11740348095551" referenceLink="//@navigationRule.5/@navigationCase.0/@toViewId|" inlinks="pf11740348095550" path="/pages/validation-sample/explicit-validation.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/dbsample/index" x="597" y="1923" id="pf11742859470393" referenceLink="//@navigationRule.10/@navigationCase.0/@toViewId|" outlinks="pf11787981582502" inlinks="pf11742859470392 pf11787981582502" path="/pages/dbsample/index.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/ajax/index" x="504" y="1884" id="pf11745512689632" referenceLink="//@navigationRule.7/@navigationCase.0/@toViewId|" inlinks="pf11745512689631" path="/pages/ajax/index.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="login" x="101" y="1174" id="pf11767059027261" referenceLink="//@navigationRule.8/@fromViewId|" outlinks="pf11767059027260" path="/login.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="welcome" x="124" y="1264" id="pf11767070614433" referenceLink="//@navigationRule.9/@fromViewId|" outlinks="pf11767070614272" path="/welcome.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/tabular/index" x="732" y="1863" id="pf11788600095752" inlinks="pf11788600095751" path="/pages/tabular/index.jsp"/>
+  <links id="pf11739522809664" target="pf11739522809667" source="pf11739522809663" outcome="success"/>
+  <links id="pf11739522809665" target="pf117395228098114" source="pf11739522809663" outcome="bad-address"/>
+  <links id="pf11739522809666" target="pf117395228098115" source="pf11739522809663" outcome="bad-password"/>
+  <links id="pf11739522809668" target="pf117395228098116" source="pf11739522809667" outcome="showHealthPlanRegistration"/>
+  <links id="pf11739522809669" target="pf117395228098121" source="pf11739522809667" outcome="showElTest"/>
+  <links id="pf117395228096610" target="pf117395228098122" source="pf11739522809667" outcome="showNestedBeanSubmitSample"/>
+  <links id="pf117395228096611" target="pf117395228098123" source="pf11739522809667" outcome="showEventsSample"/>
+  <links id="pf117395228096612" target="pf117395228098124" source="pf11739522809667" outcome="showComboEventsSample"/>
+  <links id="pf117395228098117" target="pf117395228098125" source="pf117395228098116" outcome="accepted"/>
+  <links id="pf117395228098118" target="pf117395228098126" source="pf117395228098116" outcome="rejected"/>
+  <links id="pf117395228098119" target="pf117395228098127" source="pf117395228098116" outcome="bad-firstname"/>
+  <links id="pf117395228098120" target="pf117395228098128" source="pf117395228098116" outcome="bad_annual_salary"/>
+  <links id="pf117395228096613" target="pf117395228098129" source="pf11739522809667" outcome="showValidationSamples" redirect="true"/>
+  <links id="pf117402714255536" target="pf117402714255537" source="pf11739522809667" outcome="implicitValidationSample" redirect="true"/>
+  <links id="pf11740348095550" target="pf11740348095551" source="pf11739522809667" outcome="explicitValidationSample"/>
+  <links id="pf11742859470392" target="pf11742859470393" source="pf11739522809667" outcome="showDBSample"/>
+  <links id="pf11745512689631" target="pf11745512689632" source="pf11739522809667" outcome="showAjaxSamples"/>
+  <links id="pf11767059027260" target="pf11739522809663" source="pf11767059027261" outcome="enter"/>
+  <links id="pf11767070614272" target="pf11739522809663" source="pf11767070614433" outcome="enter"/>
+  <links id="pf11787981582502" target="pf11742859470393" source="pf11742859470393" outcome="success">
+    <bendPoints d1Height="-36" d2Height="-36"/>
+    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
+    <bendPoints d1Width="-64" d2Width="-64"/>
+  </links>
+  <links id="pf11788600095751" target="pf11788600095752" source="pf11739522809667" outcome="showTabularSample"/>
+</pageflow:Pageflow>
