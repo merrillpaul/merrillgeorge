@@ -1,0 +1,68 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence persistence_1_0.xsd"
+	version="1.0">
+	<persistence-unit name="default"
+		transaction-type="RESOURCE_LOCAL" >
+		<!-- JTA  -->
+		
+		<!--
+			Don't need to specify the provider when using Spring. This is defined in 
+            the Spring configuration.
+		-->
+		<!-- 
+		<provider>
+			oracle.toplink.essentials.PersistenceProvider
+		</provider>
+		 -->
+		<!--
+		<jta-data-source>jdbc/jpasample</jta-data-source>
+		-->
+		<class>
+			com.merrill.examples.business.iport.masters.domain.VesselType
+		</class>
+		<class>
+			com.merrill.examples.business.iport.masters.domain.Port
+		</class>
+
+		<properties>
+		<!-- 
+			<property name="toplink.logging.level" value="FINE" />
+			<property name="toplink.jdbc.driver" value="oracle.jdbc.OracleDriver"/>  
+			<property name="toplink.jdbc.url" value="jdbc:oracle:thin:@192.168.0.193:1521:TST1"/> 
+			<property name="toplink.jdbc.password" value="iportsh_test"/> 
+			<property name="toplink.jdbc.user" value="iportsh_test"/> 
+ -->
+			
+			<!-- 
+			<property name="toplink.jdbc.driver"
+				value="org.gjt.mm.mysql.Driver" />
+			<property name="toplink.jdbc.url"
+				value="jdbc:mysql://localhost:3306/jpasample" />
+			<property name="toplink.jdbc.password" value="" />
+			<property name="toplink.jdbc.user" value="merrill" />
+			-->
+			<!-- property name="toplink.ddl-generation"
+				value="create-tables" / -->
+			
+			<!--
+			    Some specific TopLink properties can make logging less verbose...
+	       	-->
+				
+			<!-- property name="toplink.logging.timestamp" value="false"/>
+            <property name="toplink.logging.thread" value="false"/>
+            <property name="toplink.logging.session" value="false"/>
+            <property name="toplink.throw.orm.exceptions" value="true"/ -->	
+		</properties>
+	</persistence-unit>
+
+	<!-- 
+		<persistence-unit name="HibernateApp" transaction-type="JTA">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<jta-data-source>jdbc/sample</jta-data-source>
+		<properties>
+		<property name="hibernate.show_sql" value="true" />
+		</properties>
+		</persistence-unit>
+	-->
+</persistence>

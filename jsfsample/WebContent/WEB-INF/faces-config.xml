@@ -1,0 +1,258 @@
+<?xml version="1.0"?>
+<!DOCTYPE faces-config PUBLIC
+  "-//Sun Microsystems, Inc.//DTD JavaServer Faces Config 1.1//EN"
+  "http://java.sun.com/dtd/web-facesconfig_1_1.dtd">
+<faces-config>
+
+	<application>
+		<locale-config>
+			<default-locale>en</default-locale>
+			<supported-locale>de</supported-locale>
+			<supported-locale>fr</supported-locale>
+			<supported-locale>es</supported-locale>
+		</locale-config>
+	</application>
+
+	<application>
+		<variable-resolver>
+			org.springframework.web.jsf.DelegatingVariableResolver
+		</variable-resolver>
+		<locale-config>
+			<default-locale>en</default-locale>
+			<supported-locale>en</supported-locale>
+			<supported-locale>es</supported-locale>
+		</locale-config>
+		<message-bundle>messages</message-bundle>
+	</application>
+
+	<!-- authentication controller bean -->
+	<managed-bean>
+		<managed-bean-name>authenticationController</managed-bean-name>
+		<managed-bean-class>
+			com.merrill.examples.client.controller.security.AuthenticationController
+		</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+
+
+
+	<!-- health plan controller bean -->
+	<managed-bean>
+		<managed-bean-name>healthPlanController</managed-bean-name>
+		<managed-bean-class>
+			com.merrill.examples.client.controller.healthplan.HealthPlanController
+		</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+		<managed-property>
+			<property-name>healthPlanRegistrationForm</property-name>
+			<value>#{healthPlanRegistrationForm}</value>
+		</managed-property>
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>
+			healthPlanRegistrationForm
+		</managed-bean-name>
+		<managed-bean-class>
+			com.merrill.examples.client.ui.form.healthplan.HealthPlanRegistrationForm
+		</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>
+		vesselTypeHelperController</managed-bean-name>
+		<managed-bean-class>
+		com.merrill.examples.client.controller.iport.masters.VesselTypeHelperController</managed-bean-class>
+		<managed-bean-scope>
+		request</managed-bean-scope>
+	</managed-bean>
+
+
+
+
+	<navigation-rule>
+		<from-view-id>/pages/login.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/pages/login_result.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>bad-address</from-outcome>
+			<to-view-id>
+				/pages/login_failure_badaddress_result.jsp
+			</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>bad-password</from-outcome>
+			<to-view-id>
+				/pages/login_failure_badpassword_result.jsp
+			</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/pages/login_result.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>showHealthPlanRegistration</from-outcome>
+			<to-view-id>
+				/pages/healthplan/register_healthplan.jsp
+			</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>showElTest</from-outcome>
+			<to-view-id>
+				/pages/jsf-el-sample/bean-properties.jsp
+			</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>showNestedBeanSubmitSample</from-outcome>
+			<to-view-id>
+				/pages/jsf-el-sample/submitting-nested-bean.jsp
+			</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>showEventsSample</from-outcome>
+			<to-view-id>/pages/event-sample/index.jsp</to-view-id>
+		</navigation-case>
+
+
+		<navigation-case>
+			<from-outcome>showComboEventsSample</from-outcome>
+			<to-view-id>
+				/pages/event-sample/combination-event-sample/index.jsp
+			</to-view-id>
+		</navigation-case>
+
+
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>
+			/pages/healthplan/register_healthplan.jsp
+		</from-view-id>
+		<navigation-case>
+			<from-outcome>accepted</from-outcome>
+			<to-view-id>
+				/pages/healthplan/healthplan_accepted.jsp
+			</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>rejected</from-outcome>
+			<to-view-id>
+				/pages/healthplan/healthplan_rejected.jsp
+			</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>bad-firstname</from-outcome>
+			<to-view-id>
+				/pages/healthplan/healthplan_badfirstname.jsp
+			</to-view-id>
+		</navigation-case>
+
+
+
+		<navigation-case>
+			<from-outcome>bad_annual_salary</from-outcome>
+			<to-view-id>
+				/pages/healthplan/healthplan_badannualsalary.jsp
+			</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>pages/login_result</display-name>
+		<from-view-id>/pages/login_result.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>showValidationSamples</from-outcome>
+			<to-view-id>/pages/validation-sample/index.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>pages/login_result</display-name>
+		<from-view-id>/pages/login_result.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>implicitValidationSample</from-outcome>
+			<to-view-id>
+				/pages/validation-sample/implicit-validation.jsp
+			</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>pages/login_result</display-name>
+		<from-view-id>/pages/login_result.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>explicitValidationSample</from-outcome>
+			<to-view-id>
+				/pages/validation-sample/explicit-validation.jsp
+			</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/pages/login_result.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>showDBSample</from-outcome>
+			<to-view-id>/pages/dbsample/index.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>
+		pages/login_result</display-name>
+		<from-view-id>
+		/pages/login_result.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>showAjaxSamples</from-outcome>
+			<to-view-id>
+			/pages/ajax/index.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>
+		login</display-name>
+		<from-view-id>
+		/login.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>enter</from-outcome>
+			<to-view-id>
+			/pages/login.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>
+		welcome</display-name>
+		<from-view-id>
+		/welcome.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>enter</from-outcome>
+			<to-view-id>
+			/pages/login.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>
+		pages/dbsample/index</display-name>
+		<from-view-id>
+		/pages/dbsample/index.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>success</from-outcome>
+			<to-view-id>
+			/pages/dbsample/index.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>
+		pages/login_result</display-name>
+		<from-view-id>
+		/pages/login_result.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>showTabularSample</from-outcome>
+			<to-view-id>
+			/pages/tabular/index.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+
+</faces-config>

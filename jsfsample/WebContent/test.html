@@ -1,0 +1,911 @@
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+<html lang="en">
+	<head>
+		<title>iCargo : Mail Manifest</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<meta http-equiv="cache-control" content="no-cache"/>
+		<meta http-equiv="expires" content="0"/>
+		<meta http-equiv="pragma" content="no-cache"/>
+		  
+ 
+ 
+ 
+ 
+ 
+ <link rel='stylesheet' type='text/css' href='/icargox2/css/1024x768/icargo.css' />
+ <link rel='stylesheet' type='text/css' href='/icargox2/css/icargotable.css' />
+ <link rel='stylesheet' type='text/css' href='/icargox2/css/tab.css' /> 
+ <link rel='stylesheet' type='text/css' href='/icargox2/css/treetable.css' /> 
+ <link rel='stylesheet' type='text/css' href='/icargox2/css/formsupport.css' /> 
+ <link rel='stylesheet' type='text/css' href='/icargox2/css/suggest.css' /> 
+ <link rel="stylesheet" type='text/css' href='/icargox2/css/menu.css' />
+  <link rel="stylesheet" type='text/css' href='/icargox2/css/scribble_pad.css' />
+  <link rel="stylesheet" type='text/css' href='/icargox2/css/jscalendar/calendar.css' />
+  
+  <link rel="stylesheet" type='text/css' href='/icargox2/css/menu/menu.css' />
+  <link rel="stylesheet" type='text/css' href='/icargox2/css/menu/menu-extended.css' />
+  <link rel="stylesheet" type='text/css' href='/icargox2/css/menu/icargo-menu-skin.css' />
+<script language="javascript">
+var ctxPath='/icargox2';
+</script>
+
+<script type="text/JavaScript" src="/icargox2/js/hashtable/hashtable.js"></script>
+
+<script type="text/JavaScript" src="/icargox2/js/shared/Lov.js"></script>
+<script type="text/JavaScript" src="/icargox2/js/calendar/formatDate.js"></script>
+<script type="text/JavaScript" src="/icargox2/js/icargo_window.js"></script>
+<script type="text/JavaScript" src="/icargox2/js/icargo_common.js"></script>
+
+<script type="text/JavaScript" src="/icargox2/js/tab.js"></script>
+<script type="text/JavaScript" src="/icargox2/js/event_handler.js"></script>
+<script type="text/JavaScript" src="/icargox2/js/frequency.js"></script>
+<script type="text/JavaScript" src="/icargox2/js/treetable.js"></script>
+<script type="text/JavaScript" src="/icargox2/js/releasetimer.js"></script>
+<script type="text/JavaScript" src="/icargox2/js/route.js"></script>
+<script type="text/JavaScript" src="/icargox2/js/formsupport.js"></script>
+<script type="text/JavaScript" src="/icargox2/js/printing.js"></script>
+<script type="text/JavaScript" src="/icargox2/js/dragiframe.js"></script>
+<script type="text/JavaScript" src="/icargox2/js/suggest/suggest.js"></script>
+<script type="text/JavaScript" src="/icargox2/js/luv/AjaxHandler.js"></script>
+<script type="text/JavaScript" src="/icargox2/js/sortabletable.js"></script>
+<script type="text/JavaScript" src="/icargox2/js/colpanel.js"></script>
+<script type="text/JavaScript" src="/icargox2/js/flightnumber.js"></script>
+<script type="text/JavaScript" src="/icargox2/js/unitcomponent.js"></script>
+
+<script type="text/JavaScript" src="/icargox2/js/prototype/prototype.js"></script>
+<script type="text/JavaScript" src="/icargox2/js/scriptaculous/scriptaculous.js"></script>
+<script type="text/JavaScript" src="/icargox2/js/scriptaculous/unittest.js"></script>
+
+<script type="text/JavaScript" src="/icargox2/js/scribblepad/scribble.js"></script>
+
+<script type="text/JavaScript" src="/icargox2/js/calendar/jscalendar/calendar.js"></script>
+<script type="text/JavaScript" src="/icargox2/js/calendar/jscalendar/lang/calendar-en.js"></script>
+<script type="text/JavaScript" src="/icargox2/js/calendar/jscalendar/calendar-setup.js"></script>
+
+
+
+<script type="text/javascript">
+	var appPath='';
+	var reportServerPath='';
+	appPath='/icargox2';
+	reportServerPath='http://N7167:7001/icargo';
+</script>
+ 
+
+		<meta name="decorator" content="mainpanel">
+<script src="/icargox2/js/mailtracking/defaults/MailManifest_Script.jsp" type="text/javascript"></script>
+		
+	</head>
+
+	<body id="bodyStyle">
+		
+		<form name="menuForm"><input type="hidden" name="ctxPath" value="/icargox2"/></form>
+		<div class="iCargoContent" style="height:580px; overflow:auto;" >
+
+<form name="MailManifestForm" method="post" action="/icargox2/mailtracking.defaults.mailmanifest.screenloadmailmanifest.do"><input type="submit" name="platFormSubmit" style="display:none;visibility:hidden"  /><input type="hidden" name="luvInfo"  /><input type="hidden" name="numericalScreenId"  value="DUM249" />
+
+<input type="hidden" name="initialFocus" value="" id="">
+<input type="hidden" name="duplicateFlightStatus" value="" id="">
+<input type="hidden" name="disableSaveFlag" value="" id="">
+<input type="hidden" name="uldsSelectedFlag" value="" id="">
+<input type="hidden" name="uldsPopupCloseFlag" value="" id="">
+<input type="hidden" name="openAttachAWB" value="" id="">
+<input type="hidden" name="pou" value="" id="">
+<input type="hidden" name="pol" value="" id="">
+<input type="hidden" name="operationalStatus" value="OPEN" id="">
+
+<table style="width:980px;height:420px;overflow:auto;" align="center" class="iCargoBorderedTable" align="center">
+
+ <tr>
+     <td class="iCargoPageTitle" >Mail Manifest</td>
+ </tr>
+
+ <tr>
+     <td style="width:100%;padding-left:5px;padding-top:5px;">
+      <table width="100%" border="0" class="iCargoBorderedTable">
+	<tr>
+	  <td colspan="5" width="45%">
+  	     <table width="100%" border="0">
+		  <tr>
+		     <td  class="iCargoLabelRightAligned">Flight No<span class="iCargoMandatoryFieldIcon">*</span></td>
+		     <td >
+		      
+		      
+		      
+			
+			
+			     <input type="text"  name="flightCarrierCode" id="fltNo_flightCarrierCode" maxlength="3" size="3" class="iCargoGeneralTextFieldCaps" value="KZ" title="Enter Flight Carrier Code" luv="1" btype="BT_FLIGHT_NUMBER_carrier" ic_filter="y" style="background : #EEEEEE; border-right-width : 0px; border-bottom-width : 0px; border-left-width : 0px; border-top-width : 0px ;"  disabled="disabled" readOnly="readOnly" tabindex="1" />&nbsp;&nbsp;<input type="text"  name="flightNumber" id="fltNo_flightNumber" maxlength="4" size="4" class="iCargoGeneralTextFieldCaps" value="0607" title="Enter Flight Number" luv="1" btype="BT_FLIGHT_NUMBER_flightcode" ic_filter="y" style="background : #EEEEEE; border-right-width : 0px; border-bottom-width : 0px; border-left-width : 0px; border-top-width : 0px ;"  disabled="disabled" readOnly="readOnly" tabindex="1" />
+		      
+              	      
+		     </td>
+		     <td  class="iCargoLabelRightAligned">Dep Date<span class="iCargoMandatoryFieldIcon">*</span></td>
+		     <td >
+		       
+		       
+			    
+			    <input type="text"  name="depDate" id="flightDate" accesskey="C" maxlength="25" class="iCargoTextFieldMedium" readOnly="readOnly" disabled="disabled" tabindex="2" value="29-JAN-2007" title="Dep Date" style="background : #EEEEEE; border-right-width : 0px; border-bottom-width : 0px; border-left-width : 0px; border-top-width : 0px ;"  /><button type="button"  id="btn_flightDate" name="depDate_BTN" title="Dep Date" class="iCargoImageButton" disabled="disabled" disabled="disabled" tabindex="3" style="cursor: pointer; "  calTextId="flightDate"  ></button>
+	               
+	             </td>
+		  </tr>
+		</table>
+	   </td>
+	   <td align="right" >
+	      <button  name="btnList" id="BTN_MAILTRACKING_DEFAULTS_MAILMANIFEST_LIST" tabindex="3" title="List" class="iCargoButtonSmall">List</button>
+              <button  name="btnClear" id="BTN_MAILTRACKING_DEFAULTS_MAILMANIFEST_CLEAR" tabindex="4" title="Clear" class="iCargoButtonSmall">Clear</button>
+	   </td>
+	   <td   width="7%" class="iCargoLabelRightAligned">Dep Port</td>
+	   <td >
+	         <input type="text" name="departurePort" maxlength="3" tabindex="5" btype="BT_TXT_STATIONCODE_FOR_LIST" luv="1" value="TRV" readonly="readonly" id="CMP_MAILTRACKING_DEFAULTS_MAILMANIFEST_DEPPORT" style="background : #EEEEEE; border-right-width : 0px; border-bottom-width : 0px; border-left-width : 0px; border-top-width : 0px ;" class="iCargoTextFieldSmall" title="Dep Port">
+	   </td>
+	   <td width="35%" class="iCargoLabelCenterAligned">
+		   
+		 	<div   id="_flightStatusDisp" class="FlightStatusDisp"><table><tr><td><span title="PER-SIN-TRV-DXB" class="FlightStatusDispContents" ><input type="text" value="PER-SIN-TRV-DXB"  readonly="true"  class="FlightStatusDispTextContents"/></span><span class="FlightStatusDispContents" ><label class="fldSeparator">| </label></span><span class="FlightStatusDispContents" >23:00(S)</span><span class="FlightStatusDispContents" ><label class="fldSeparator">| </label></span><span class="FlightStatusDispContents" >Open</span><span class="FlightStatusDispContents" ><label class="fldSeparator">| </label></span><span class="FlightStatusDispContents" >Created</span></td></tr></table></div>
+		   
+		   
+	   </td>
+	 </tr>
+      </table>
+     </td>
+   </tr>
+
+   <tr>
+      <td height="17" class="iCargoHeadingLabel" style="padding-left:5px;padding-right:5px;">
+           ULD Details
+      </td>
+   </tr>
+
+   <tr align="center">
+      <td height="205" valign="top" style="padding-left:5px;" >
+         <table width="100%" class="iCargoBorderedTable" style="width:100%">
+           <tr>
+	    <td style="padding-left:5px;padding-right:5px;">
+	      <div class="iCargoTable2" id="parentTableId" align="center"  style="width:100%;  height:440px; border-top: #9DAEC5 solid 1px; border-left: #9DAEC5 solid 1px;	border-right: #9DAEC5 solid 1px; border-bottom: #9DAEC5 solid 1px;">
+	      <table width="100%" class="iCargoTable2" border="1px"  align="center" cellpadding="2">
+		<thead>
+		  <tr class="iCargoTableHeadingCenter" height="25px">
+		    <td width="7%" class="iCargoTableTd">&nbsp;</td>
+		    <td width="30%" class="iCargoTableTd">Container</td>
+		    <td width="23%" class="iCargoTableTd">POU</td>
+		    <td width="20%" class="iCargoTableTd">No of Bags</td>
+		    <td width="20%" class="iCargoTableTd">Wt(Kg)</td>
+		  </tr>
+		</thead>
+		<tbody>
+		
+		
+		
+
+		 
+		 
+		
+
+	        <!--Parent Rows -->
+		  <tr class="iCargoTableDataRow1" id="container0">
+		    <td>
+		       <div class="tier1">
+			  <a href="#" onClick="toggleRows(this)" class="folder"></a>
+			  
+			  
+	                  
+				<input type="checkbox" name="selectMail" value="0" onclick="singleSelectMail(this.form,0,'selectMail');" />
+
+			  
+	                </div>
+		    </td>
+		    <td >AKE0217KZ</td>
+		    <td >DXB</td>
+		    <td >3</td>
+		    <td >30.00</td>
+		  </tr>
+
+		  <tr id="container0-0">
+		    <td colspan="10"><div class="tier4"><a href="#" ></a></div>
+		      <table width="100%" border="0">
+		       <tr>
+			<td>
+			<div class="tableContainer" id="childdiv1" align="center"  style="width:100%;height:88px; border-top: #9DAEC5 solid 1px; border-left: #9DAEC5 solid 1px;	border-right: #9DAEC5 solid 1px; border-bottom: #9DAEC5 solid 1px;">
+			   <table width="100%" class="iCargochildTable1" border="1px"  align="center" cellpadding="2" >
+			      <thead>
+				  <tr class="iCargoTableHeadingCenter">
+				    <td width="5%" class="iCargoTableTd"><input type="checkbox" name="masterDSN" value="0" onclick="updateHeaderCheckBoxForTreeTable(this)"/></td>
+				    <td width="11%" class="iCargoTableTd">DSN</td>
+				    <td width="11%" class="iCargoTableTd">Origin OE</td>
+				    <td width="11%" class="iCargoTableTd">Destn OE</td>
+				    <td width="10%" class="iCargoTableTd">Category</td>
+				    <td width="10%" class="iCargoTableTd">Class</td>
+				    <td width="10%" class="iCargoTableTd">Sub Class</td>
+				    <td width="10%" class="iCargoTableTd">Year</td>
+				    <td width="10%" class="iCargoTableTd">No of Bags</td>
+				    <td width="10%" class="iCargoTableTd">Wt(Kg)</td>
+				    <td width="14%" class="iCargoTableTd">AWB No.</td>
+				    <td width="6%" class="iCargoTableTd">PLT</td>
+				  </tr>
+				</thead>
+				<tbody>
+				 
+				 
+
+				  
+				 	
+
+				 
+				  <tr class="iCargoTableDataRow1">
+				  	<td >
+				  	
+
+					 
+						<input type="checkbox" name="selectDSN" value="0-0" onclick="toggleTableHeaderCheckboxForTreeTable(this)"/>
+
+					 
+					</td>
+					<td >5620</td>
+					<td >INTRVA</td>
+					<td >GBLONN</td>
+					<td >A</td>
+					<td >U</td>
+					<td >
+					 
+						
+						
+						
+						
+
+						UN
+						
+					
+   					</td>
+					<td >7</td>
+					<td >1</td>
+					<td >10.00</td>
+					<td >
+					     
+					     
+					</td>
+					<td >
+				      </td>
+				   </tr>
+				 
+				  <tr class="iCargoTableDataRow1">
+				  	<td >
+				  	
+
+					 
+						<input type="checkbox" name="selectDSN" value="0-1" onclick="toggleTableHeaderCheckboxForTreeTable(this)"/>
+
+					 
+					</td>
+					<td >5621</td>
+					<td >INTRVA</td>
+					<td >AEDXBA</td>
+					<td >A</td>
+					<td >U</td>
+					<td >
+					 
+						
+						
+						
+						
+
+						UN
+						
+					
+   					</td>
+					<td >7</td>
+					<td >1</td>
+					<td >10.00</td>
+					<td >
+					     
+					     
+					</td>
+					<td >
+				      </td>
+				   </tr>
+				 
+				  <tr class="iCargoTableDataRow1">
+				  	<td >
+				  	
+
+					 
+						<input type="checkbox" name="selectDSN" value="0-2" onclick="toggleTableHeaderCheckboxForTreeTable(this)"/>
+
+					 
+					</td>
+					<td >5622</td>
+					<td >INTRVA</td>
+					<td >AEDXBA</td>
+					<td >A</td>
+					<td >U</td>
+					<td >
+					 
+						
+						
+						
+						
+
+						UN
+						
+					
+   					</td>
+					<td >7</td>
+					<td >1</td>
+					<td >10.00</td>
+					<td >
+					     
+					     
+					</td>
+					<td >
+				      </td>
+				   </tr>
+				 
+				 
+				</tbody>
+			   </table>
+			    </div>
+			 </td>
+			</tr>
+		       </table>
+		      </td>
+		     </tr>
+		     
+	  	    
+
+	        <!--Parent Rows -->
+		  <tr class="iCargoTableDataRow1" id="container1">
+		    <td>
+		       <div class="tier1">
+			  <a href="#" onClick="toggleRows(this)" class="folder"></a>
+			  
+			  
+	                  
+				<input type="checkbox" name="selectMail" value="1" onclick="singleSelectMail(this.form,1,'selectMail');" />
+
+			  
+	                </div>
+		    </td>
+		    <td >AKE0237KZ</td>
+		    <td >DXB</td>
+		    <td >10</td>
+		    <td >10.00</td>
+		  </tr>
+
+		  <tr id="container1-1">
+		    <td colspan="10"><div class="tier4"><a href="#" ></a></div>
+		      <table width="100%" border="0">
+		       <tr>
+			<td>
+			<div class="tableContainer" id="childdiv1" align="center"  style="width:100%;height:88px; border-top: #9DAEC5 solid 1px; border-left: #9DAEC5 solid 1px;	border-right: #9DAEC5 solid 1px; border-bottom: #9DAEC5 solid 1px;">
+			   <table width="100%" class="iCargochildTable1" border="1px"  align="center" cellpadding="2" >
+			      <thead>
+				  <tr class="iCargoTableHeadingCenter">
+				    <td width="5%" class="iCargoTableTd"><input type="checkbox" name="masterDSN" value="1" onclick="updateHeaderCheckBoxForTreeTable(this)"/></td>
+				    <td width="11%" class="iCargoTableTd">DSN</td>
+				    <td width="11%" class="iCargoTableTd">Origin OE</td>
+				    <td width="11%" class="iCargoTableTd">Destn OE</td>
+				    <td width="10%" class="iCargoTableTd">Category</td>
+				    <td width="10%" class="iCargoTableTd">Class</td>
+				    <td width="10%" class="iCargoTableTd">Sub Class</td>
+				    <td width="10%" class="iCargoTableTd">Year</td>
+				    <td width="10%" class="iCargoTableTd">No of Bags</td>
+				    <td width="10%" class="iCargoTableTd">Wt(Kg)</td>
+				    <td width="14%" class="iCargoTableTd">AWB No.</td>
+				    <td width="6%" class="iCargoTableTd">PLT</td>
+				  </tr>
+				</thead>
+				<tbody>
+				 
+				 
+
+				  
+				 	
+
+				 
+				  <tr class="iCargoTableDataRow1">
+				  	<td >
+				  	
+
+					 
+						<input type="checkbox" name="selectDSN" value="1-0" onclick="toggleTableHeaderCheckboxForTreeTable(this)"/>
+
+					 
+					</td>
+					<td >0025</td>
+					<td >INTRVA</td>
+					<td >GBLONN</td>
+					<td >A</td>
+					<td >A</td>
+					<td >
+					 
+						
+						
+						
+						
+						&nbsp;
+						
+					
+   					</td>
+					<td >7</td>
+					<td >5</td>
+					<td >5.00</td>
+					<td >
+					     
+					     
+					</td>
+					<td >
+				      </td>
+				   </tr>
+				 
+				  <tr class="iCargoTableDataRow1">
+				  	<td >
+				  	
+
+					 
+						<input type="checkbox" name="selectDSN" value="1-1" onclick="toggleTableHeaderCheckboxForTreeTable(this)"/>
+
+					 
+					</td>
+					<td >0256</td>
+					<td >INTRVA</td>
+					<td >AEDXBA</td>
+					<td >A</td>
+					<td >U</td>
+					<td >
+					 
+						
+						
+						
+						
+						&nbsp;
+						
+					
+   					</td>
+					<td >7</td>
+					<td >5</td>
+					<td >5.00</td>
+					<td >
+					     
+					     
+					</td>
+					<td >
+				      </td>
+				   </tr>
+				 
+				 
+				</tbody>
+			   </table>
+			    </div>
+			 </td>
+			</tr>
+		       </table>
+		      </td>
+		     </tr>
+		     
+	  	    
+
+	        <!--Parent Rows -->
+		  <tr class="iCargoTableDataRow1" id="container2">
+		    <td>
+		       <div class="tier1">
+			  <a href="#" onClick="toggleRows(this)" class="folder"></a>
+			  
+			  
+	                  
+				<input type="checkbox" name="selectMail" value="2" onclick="singleSelectMail(this.form,2,'selectMail');" />
+
+			  
+	                </div>
+		    </td>
+		    <td >AKE0720KZ</td>
+		    <td >DXB</td>
+		    <td >9</td>
+		    <td >18.00</td>
+		  </tr>
+
+		  <tr id="container2-2">
+		    <td colspan="10"><div class="tier4"><a href="#" ></a></div>
+		      <table width="100%" border="0">
+		       <tr>
+			<td>
+			<div class="tableContainer" id="childdiv1" align="center"  style="width:100%;height:88px; border-top: #9DAEC5 solid 1px; border-left: #9DAEC5 solid 1px;	border-right: #9DAEC5 solid 1px; border-bottom: #9DAEC5 solid 1px;">
+			   <table width="100%" class="iCargochildTable1" border="1px"  align="center" cellpadding="2" >
+			      <thead>
+				  <tr class="iCargoTableHeadingCenter">
+				    <td width="5%" class="iCargoTableTd"><input type="checkbox" name="masterDSN" value="2" onclick="updateHeaderCheckBoxForTreeTable(this)"/></td>
+				    <td width="11%" class="iCargoTableTd">DSN</td>
+				    <td width="11%" class="iCargoTableTd">Origin OE</td>
+				    <td width="11%" class="iCargoTableTd">Destn OE</td>
+				    <td width="10%" class="iCargoTableTd">Category</td>
+				    <td width="10%" class="iCargoTableTd">Class</td>
+				    <td width="10%" class="iCargoTableTd">Sub Class</td>
+				    <td width="10%" class="iCargoTableTd">Year</td>
+				    <td width="10%" class="iCargoTableTd">No of Bags</td>
+				    <td width="10%" class="iCargoTableTd">Wt(Kg)</td>
+				    <td width="14%" class="iCargoTableTd">AWB No.</td>
+				    <td width="6%" class="iCargoTableTd">PLT</td>
+				  </tr>
+				</thead>
+				<tbody>
+				 
+				 
+
+				  
+				 	
+
+				 
+				  <tr class="iCargoTableDataRow1">
+				  	<td >
+				  	
+
+					 
+						<input type="checkbox" name="selectDSN" value="2-0" onclick="toggleTableHeaderCheckboxForTreeTable(this)"/>
+
+					 
+					</td>
+					<td >0255</td>
+					<td >INTRVA</td>
+					<td >GBLONN</td>
+					<td >A</td>
+					<td >U</td>
+					<td >
+					 
+						
+						
+						
+						
+						&nbsp;
+						
+					
+   					</td>
+					<td >7</td>
+					<td >8</td>
+					<td >8.00</td>
+					<td >
+					     
+					     
+					</td>
+					<td >
+				      </td>
+				   </tr>
+				 
+				  <tr class="iCargoTableDataRow1">
+				  	<td >
+				  	
+
+					 
+						<input type="checkbox" name="selectDSN" value="2-1" onclick="toggleTableHeaderCheckboxForTreeTable(this)"/>
+
+					 
+					</td>
+					<td >0256</td>
+					<td >INTRVA</td>
+					<td >INBOMA</td>
+					<td >A</td>
+					<td >U</td>
+					<td >
+					 
+						
+						
+						
+						
+
+						UN
+						
+					
+   					</td>
+					<td >7</td>
+					<td >1</td>
+					<td >10.00</td>
+					<td >
+					     
+					     
+					</td>
+					<td >
+				      </td>
+				   </tr>
+				 
+				 
+				</tbody>
+			   </table>
+			    </div>
+			 </td>
+			</tr>
+		       </table>
+		      </td>
+		     </tr>
+		     
+	  	    
+
+	        <!--Parent Rows -->
+		  <tr class="iCargoTableDataRow1" id="container3">
+		    <td>
+		       <div class="tier1">
+			  <a href="#" onClick="toggleRows(this)" class="folder"></a>
+			  
+			  
+	                  
+				<input type="checkbox" name="selectMail" value="3" onclick="singleSelectMail(this.form,3,'selectMail');" />
+
+			  
+	                </div>
+		    </td>
+		    <td >BULK-DXB</td>
+		    <td >DXB</td>
+		    <td >1</td>
+		    <td >10.00</td>
+		  </tr>
+
+		  <tr id="container3-3">
+		    <td colspan="10"><div class="tier4"><a href="#" ></a></div>
+		      <table width="100%" border="0">
+		       <tr>
+			<td>
+			<div class="tableContainer" id="childdiv1" align="center"  style="width:100%;height:88px; border-top: #9DAEC5 solid 1px; border-left: #9DAEC5 solid 1px;	border-right: #9DAEC5 solid 1px; border-bottom: #9DAEC5 solid 1px;">
+			   <table width="100%" class="iCargochildTable1" border="1px"  align="center" cellpadding="2" >
+			      <thead>
+				  <tr class="iCargoTableHeadingCenter">
+				    <td width="5%" class="iCargoTableTd"><input type="checkbox" name="masterDSN" value="3" onclick="updateHeaderCheckBoxForTreeTable(this)"/></td>
+				    <td width="11%" class="iCargoTableTd">DSN</td>
+				    <td width="11%" class="iCargoTableTd">Origin OE</td>
+				    <td width="11%" class="iCargoTableTd">Destn OE</td>
+				    <td width="10%" class="iCargoTableTd">Category</td>
+				    <td width="10%" class="iCargoTableTd">Class</td>
+				    <td width="10%" class="iCargoTableTd">Sub Class</td>
+				    <td width="10%" class="iCargoTableTd">Year</td>
+				    <td width="10%" class="iCargoTableTd">No of Bags</td>
+				    <td width="10%" class="iCargoTableTd">Wt(Kg)</td>
+				    <td width="14%" class="iCargoTableTd">AWB No.</td>
+				    <td width="6%" class="iCargoTableTd">PLT</td>
+				  </tr>
+				</thead>
+				<tbody>
+				 
+				 
+
+				  
+				 	
+
+				 
+				  <tr class="iCargoTableDataRow1">
+				  	<td >
+				  	
+
+					 
+						<input type="checkbox" name="selectDSN" value="3-0" onclick="toggleTableHeaderCheckboxForTreeTable(this)"/>
+
+					 
+					</td>
+					<td >1645</td>
+					<td >INTRVA</td>
+					<td >AEDXBA</td>
+					<td >A</td>
+					<td >U</td>
+					<td >
+					 
+						
+						
+						
+						
+
+						UN
+						
+					
+   					</td>
+					<td >7</td>
+					<td >1</td>
+					<td >10.00</td>
+					<td >
+					     
+					     
+					</td>
+					<td >
+				      </td>
+				   </tr>
+				 
+				 
+				</tbody>
+			   </table>
+			    </div>
+			 </td>
+			</tr>
+		       </table>
+		      </td>
+		     </tr>
+		     
+	  	    
+                    
+                    <tr></tr>
+                    <tbody>
+                    </table>
+	 	</div>
+	      </td>
+	    </tr>
+          </table>
+        </td>
+     </tr>
+     </table>
+     <table style="width:980px;" class="iCargoBorderedTable" align="center">
+     <tr>
+      <td>
+        <div align="right">
+
+        <button  name="btnAutoAttachAWB" id="BTN_MAILTRACKING_DEFAULTS_MAILMANIFEST_AUTOATTACH" tabindex="6" title="Auto Attach AWB" class="iCargoButtonLong">Auto Attach AWB</button>
+	  <button  name="btnViewMailDetails" id="BTN_MAILTRACKING_DEFAULTS_MAILMANIFEST_VIEWMAILDETAILS" tabindex="6" title="Assign Container" class="iCargoButtonLong">View Mail Details</button>
+	  <button  name="btnReopenFlight" id="BTN_MAILTRACKING_DEFAULTS_MAILMANIFEST_REOPENFLIGHT" tabindex="7" title="Reopen Flight" class="iCargoButtonMedium">Reopen Flight</button>
+	  <button  name="btnCloseFlight" id="BTN_MAILTRACKING_DEFAULTS_MAILMANIFEST_CLOSEFLIGHT" tabindex="8" title="Close Flight" class="iCargoButtonMedium">Close Flight</button>
+	  <button  name="btnAttachAWB" id="BTN_MAILTRACKING_DEFAULTS_MAILMANIFEST_ATTACHAWB" tabindex="11" title="Attach AWB" class="iCargoButtonMedium">Attach AWB</button>
+	  <button  name="btnGenerateManifest" id="BTN_MAILTRACKING_DEFAULTS_MAILMANIFEST_GENERATEMANIFEST" tabindex="12" title="Generate Manifest" class="iCargoButtonLong">Generate Manifest</button>
+	  <button  name="btnClose" id="BTN_MAILTRACKING_DEFAULTS_MAILMANIFEST_CLOSE" tabindex="13" title="Close" class="iCargoButtonSmall">Close</button>
+	</div>
+      </td>
+    </tr>
+  </table>
+</form>
+</div>
+		<span id="prevFormVals" style="display:none"></span>
+		<span id="ignoreUnSaveCheck" style="display:none">N</span>
+		<span id="currentSuggestCtrl" style="display:none;width:0px"></span>
+		<span id="suggestContainer" class="suggestspan" style="display:all;width:0px"></span>
+		<iframe id="suggestContainerFrame" src="javascript:false;" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;filter: progid:DXImageTransform.Microsoft.Shadow(color=gray,direction=135);"></iframe>
+		<span id="ajaxSpan" style="display:none;width:0px"></span>
+		<iframe name="ajaxFrame" style="display:none;width:0px:height:0px">
+		</iframe>
+		
+		<div  class="scribblePad" id="scribblePad" >
+ <span id="scribbleLabel">Scribble pad</span>
+ <span id="scribbleText" contenteditable="true"  >
+ </span>
+ <button id="scribblePadBtn" class="iCargoButtonMedium" name="scribblePadBtn" type="button" >Save</button>
+</div>
+<IFRAME style="position:absolute;display:none;FILTER:alpha(opacity=80);-moz-opacity:0.80;" id="scribbleIFrame" name="scribbleIFrame" src="about:blank" frameBorder="0" width="0" height="0" >
+</IFRAME>
+<IFRAME style="position:absolute;display:none;FILTER:alpha(opacity=20);-moz-opacity:0.20;" id="blockerIFrame" name="blockerIFrame" src="about:blank" frameBorder="0" width="0" height="0" >
+</IFRAME>
+
+ 
+
+				
+		<div id="_msgTitleBar" style="position:absolute;display:none;">
+	
+	<div style="background-color:#ff8080;width:50%;border:2px solid red;">
+	
+  	 <table width="100%" border="0" cellpadding="0" cellspacing="0">
+	  <tr class="iCargoHeadingLabel" >
+		<td align="left">Message:</td>
+		<td width="100%" align="right">
+		  <img src="/icargox2/images/CloseButton.bmp" onclick="hideMsgPanel();"></img>
+		</td>
+	  </tr>
+	  
+	  <tr class="iCargoDataLabel">
+		<td colspan="2">
+		  <div style="font-weight:bold;padding:3px" id="_msgtext"></div>
+		</td>
+	  </tr>
+         </table>
+	</div>
+</div>
+		
+		
+		
+
+	</body>
+	
+<!--Footer Begins-->
+ <div id="footerLayer" style="display:none;visibility:hidden" class="footer">
+				
+	 			
+	 			
+	     	  	
+	 		   		&nbsp;
+	     	  	
+	     	  	
+	 		    	&nbsp;
+	     	  	
+	     	  	
+	 		    	&nbsp;
+    	 		
+
+  	 		
+  	 		
+ </div>
+ <!--Footer Ends-->
+
+<!--  PANEL FOR ERROR MESSAGES -->
+<div id="errorDiv" style="height:225px;position:absolute; display:none; z-index:999; overflow:hidden">
+
+</div>
+<iframe
+			  id="DivShim"
+			  scrolling="no"
+			  frameborder="0"
+			  style="position:absolute; top:0px; left:0px; display:none;">
+ 	</iframe>	
+<!-- PANEL FOR ERROR MESSAGES :END -->
+
+
+<!-- ALERT MESSAGE FOR INFO -->
+
+
+
+<!-- CONFIRM MESSAGE FOR WARNINGS -->
+
+
+
+<!-- CONFIRM MESSAGE FOR GROUP WARNINGS -->
+	<script language="JavaScript" type="text/JavaScript">
+
+var targetFormName=document.forms['MailManifestForm'];
+var targetScreenId='mailtracking.defaults.mailmanifest';
+window.onload=initForm;
+window.onunload=exitForm;
+document.forms['MailManifestForm'].onsubmit=onSubmittingTheForm;
+function initForm(){
+if(window.setWindowTitle){setWindowTitle();}
+try{top.enableMenuLinks();}catch(e){}
+try{document.onmousedown = hideMenu; 
+ hideMenu();}catch(e){}
+
+
+
+varArrayEVT_BLUR_flightDate=createEVT_BLURForflightDate();
+
+
+
+
+with(targetFormName){
+evtHandler.addIDEvents('CMP_MAILTRACKING_DEFAULTS_MAILMANIFEST_DEPPORT',"restrictAlpha(this)",EVT_KEYDOWN);
+evtHandler.addIDEvents('CMP_MAILTRACKING_DEFAULTS_MAILMANIFEST_DEPPORT',"validateMaximumLength(this,3,this.name,false,false)",EVT_KEYPRESS);
+evtHandler.addIDEvents('flightDate',varArrayEVT_BLUR_flightDate,EVT_BLUR);
+evtHandler.addIDEvents('btn_flightDate',"showCalendar(this)",EVT_CLICK);
+evtHandler.addIDEvents('fltNo_flightCarrierCode',"checkCarrierCode(this)",EVT_KEYPRESS);
+evtHandler.addIDEvents('fltNo_flightNumber',"checkFlightNumber(this)",EVT_KEYPRESS);
+evtHandler.addIDEvents('fltNo_flightNumber',"validateFlightNumber(this)",EVT_BLUR);}
+if(window.preScreenLoad){preScreenLoad();}
+if(window.showWarning){showWarning();}
+if(window.showWarningGroup){showWarningGroup();}
+if(window.showInfo){showInfo();}
+DivSetVisible(true);
+if(window.screenSpecificEventRegister){screenSpecificEventRegister();}
+
+
+function createEVT_BLURForflightDate(){
+arrayEVT_BLURForflightDate= new Array();
+arrayEVT_BLURForflightDate.push("autoFillDate(this)");
+arrayEVT_BLURForflightDate.push("checkDate(this)");
+return arrayEVT_BLURForflightDate;
+}
+
+if(window.setPreviousFormVals){setPreviousFormVals(targetFormName);}
+if(window.applyScrollTableStyles){applyScrollTableStyles();}
+if(window.applyClickEventsForTableRows){applyClickEventsForTableRows();}
+}
+function exitForm(){
+if(window.screenSpecificBodyOnUnload){screenSpecificBodyOnUnload();}
+if(window.commonPopupUnload){commonPopupUnload();}
+}
+function onSubmittingTheForm(){
+if(window.hasFormChanged){
+ var fChanged=hasFormChanged();
+ if( fChanged==true){
+var cnfrm=showWarningDialog("Unsaved data exists. Do you want to continue ?")
+if ( cnfrm==false ){
+	document.body.style.cursor = 'default';isSubmitInvoked = false;event.returnValue= false;return false;
+
+}}}
+if(window.screenSpecificOnSubmit){screenSpecificOnSubmit();}
+}
+</script>
+
+</html>
+

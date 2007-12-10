@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE faces-config PUBLIC
+  "-//Sun Microsystems, Inc.//DTD JavaServer Faces Config 1.1//EN"
+  "http://java.sun.com/dtd/web-facesconfig_1_1.dtd">
+<faces-config>
+	<managed-bean>
+		<managed-bean-name>echoForm</managed-bean-name>
+		<managed-bean-class>
+			com.merrill.examples.client.ui.form.ajxsample.echo.EchoForm
+		</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+		<managed-property>
+			<property-name>message</property-name>
+			<property-class>java.lang.String</property-class>
+			<value></value>
+		</managed-property>
+		<managed-property>
+			<property-name>
+			ajaxMessage</property-name>
+			<property-class>
+			java.lang.String</property-class>
+			<value>
+			</value>
+		</managed-property>
+	</managed-bean>
+	<navigation-rule>
+		<display-name>pages/ajax/index</display-name>
+		<from-view-id>/pages/ajax/index.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>showEchoSample</from-outcome>
+			<to-view-id>/pages/ajax/echo/index.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>
+		pages/ajax/index</display-name>
+		<from-view-id>
+		/pages/ajax/index.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>showDWRSamples</from-outcome>
+			<to-view-id>
+			/pages/ajax/dwr-sample/index.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+
+
+
+</faces-config>

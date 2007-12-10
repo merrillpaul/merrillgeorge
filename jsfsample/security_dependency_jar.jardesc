@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jardesc>
+    <jar path="D:/Merrill/Servers/Tomcat5/server/lib/mysample_securityDependency.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/jsf-mysample-1.0/security_dependency_jar.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+        <javaElement handleIdentifier="=jsf-mysample-1.0/src&lt;com.merrill.examples.framework.security.auth.loginmodule.spring.conf"/>
+        <javaElement handleIdentifier="=jsf-mysample-1.0/src&lt;com.merrill.examples.framework.security.auth"/>
+        <javaElement handleIdentifier="=jsf-mysample-1.0/src&lt;com.merrill.examples.framework.security.auth.loginmodule.spring"/>
+        <javaElement handleIdentifier="=jsf-mysample-1.0/src&lt;com.merrill.examples.framework.security.auth.provider.db"/>
+        <javaElement handleIdentifier="=jsf-mysample-1.0/src&lt;com.merrill.examples.framework.security.token.captcha"/>
+        <javaElement handleIdentifier="=jsf-mysample-1.0/src&lt;com.merrill.examples.framework.security.auth.validator"/>
+        <javaElement handleIdentifier="=jsf-mysample-1.0/src&lt;com.merrill.examples.framework.security.token"/>
+        <javaElement handleIdentifier="=jsf-mysample-1.0/src&lt;com.merrill.examples.framework.security.auth.credentials"/>
+        <javaElement handleIdentifier="=jsf-mysample-1.0/src&lt;com.merrill.examples.framework.security.auth.loginmodule"/>
+        <javaElement handleIdentifier="=jsf-mysample-1.0/src&lt;com.merrill.examples.framework.security.token.service"/>
+        <javaElement handleIdentifier="=jsf-mysample-1.0/src&lt;com.merrill.examples.framework.security.auth.loginmodule.tomcat"/>
+        <javaElement handleIdentifier="=jsf-mysample-1.0/src&lt;com.merrill.examples.framework.security.user.tomcat"/>
+        <javaElement handleIdentifier="=jsf-mysample-1.0/src&lt;com.merrill.examples.framework.security.auth.provider.db.impl"/>
+        <javaElement handleIdentifier="=jsf-mysample-1.0/src&lt;com.merrill.examples.framework.security.user"/>
+    </selectedElements>
+</jardesc>
