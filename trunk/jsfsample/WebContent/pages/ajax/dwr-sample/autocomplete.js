@@ -21,6 +21,8 @@ function createAutoCompleter() {
 
  }
  
+ 
+ 
 function portSelected(inputElement,selectedElement,selectedPort){
  	inputElement.value = selectedPort.portCode;
 }
