@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf11752425473802" configfile="/jsf-mysample-1.0/WebContent/WEB-INF/dwr-samples-faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="pages/ajax/dwr-sample/index" x="164" y="78" id="pf11752433229118" outlinks="pf11752433229119" path="/pages/ajax/dwr-sample/index.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/ajax/dwr-sample/port_crud1" x="295" y="258" id="pf117524332291110" inlinks="pf11752433229119" path="/pages/ajax/dwr-sample/port_crud1.jsp"/>
+  <links id="pf11752433229119" target="pf117524332291110" source="pf11752433229118" outcome="showPortCRUD1"/>
+</pageflow:Pageflow>

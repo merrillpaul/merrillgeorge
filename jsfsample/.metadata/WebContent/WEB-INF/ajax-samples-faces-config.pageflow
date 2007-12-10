@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf11745511908060" configfile="/jsf-mysample-1.0/WebContent/WEB-INF/ajax-samples-faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="pages/ajax/index" x="12" y="288" id="pf11745514352053" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf11745514352054 pf11752432794116" path="/pages/ajax/index.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/ajax/echo/index" x="72" y="36" id="pf11745514352055" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf11745514352054" path="/pages/ajax/echo/index.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/ajax/dwr-sample/index" x="294" y="208" id="pf11752432794117" inlinks="pf11752432794116" path="/pages/ajax/dwr-sample/index.jsp"/>
+  <links id="pf11745514352054" target="pf11745514352055" source="pf11745514352053" outcome="showEchoSample"/>
+  <links id="pf11752432794116" target="pf11752432794117" source="pf11745514352053" outcome="showDWRSamples"/>
+</pageflow:Pageflow>
