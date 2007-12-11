@@ -19,7 +19,7 @@ public class VehicleMake implements Serializable {
 	private Long id;
 
 
-	@Column(name="MAKE_NO")
+	@Column(name="MAKE_NO" , unique=true)
 	private String makeNo;
 
 	private String model;

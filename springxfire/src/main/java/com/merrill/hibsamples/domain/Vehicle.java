@@ -13,6 +13,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.Version;
 
@@ -22,6 +24,12 @@ import javax.persistence.Version;
  */
 @Entity
 @Table(name="PRT_VEHICLE")
+@NamedQueries({
+	@NamedQuery(name="vehicleofMake",
+			query ="select v from Vehicle where v.make.makeNo = :makeNumber order by v.registrationNumber "
+	)
+}
+		)
 public class Vehicle {
 	
 	@Id
