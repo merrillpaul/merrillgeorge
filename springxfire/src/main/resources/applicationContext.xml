@@ -5,5 +5,15 @@
 
     <!-- Add new DAOs here -->
 
+<!-- 
+	<bean id="vehicleMakeDao" class="org.appfuse.dao.jpa.GenericDaoJpa">
+		<constructor-arg value="com.merrill.hibsamples.domain.VehicleMake"/>
+	</bean>
+	-->
+	<bean id="vehicleMakeDao" class="com.merrill.hibsamples.dao.impl.jpa.VehicleMakeJpaDao"/>
+
+
+	
+	
     <!-- Add new Managers here -->
 </beans>
