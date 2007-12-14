@@ -22,9 +22,10 @@ public class VehicleMake implements Serializable {
 	@Column(name="MAKE_NO" , unique=true)
 	private String makeNo;
 
+	@Column(name="MODEL_NAME", length=20 )
 	private String model;
 
-	@Column(name="MAKE_NAME")
+	@Column(name="MAKE_NAME",length=40)
 	private String makeName;
 
 	private static final long serialVersionUID = 1L;

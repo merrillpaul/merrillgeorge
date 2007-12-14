@@ -26,7 +26,7 @@ import javax.persistence.Version;
 @Table(name="PRT_VEHICLE")
 @NamedQueries({
 	@NamedQuery(name="vehicleofMake",
-			query ="select v from Vehicle where v.make.makeNo = :makeNumber order by v.registrationNumber "
+			query ="select v from Vehicle v where v.make.makeNo = :makeNumber order by v.registrationNumber "
 	)
 }
 		)
